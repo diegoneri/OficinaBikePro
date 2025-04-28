@@ -39,10 +39,35 @@ Console.WriteLine($"{"+".PadRight(TAMANHO_LINHA, SEPARADOR)}+");
 
 Console.Write($"\n\nInforme a quantidade de {nomePrimeiroItem}: ");
 qtdItem1 = Convert.ToInt32(Console.ReadLine());
+
+bool primeiroNumeroEhNegativo = qtdItem1 < 0;
+
+// if (primeiroNumeroEhNegativo)
+// {
+//     Console.WriteLine("Quantidade informada é negativa. Será considerada como zero.");
+//     qtdItem1 = 0;
+// }
+if (primeiroNumeroEhNegativo)
+{
+    Console.WriteLine("Quantidade inválida!");
+    return;
+}
+
 Console.Write($"Informe a quantidade de {nomeSegundoItem}: ");
 qtdItem2 = Convert.ToInt32(Console.ReadLine());
+if (qtdItem2 < 0)
+{
+    Console.WriteLine("Quantidade inválida!");
+    return;
+}
+
 Console.Write($"Informe a quantidade de {nomeTerceiroItem}: ");
 qtdItem3 = Convert.ToInt32(Console.ReadLine());
+if (qtdItem3 < 0)
+{
+    Console.WriteLine("Quantidade inválida!");
+    return;
+}
 
 subtotalItemUm = qtdItem1 * precoPrimeiroItem;
 subTotalItemDois = qtdItem2 * precoSegundoItem;
