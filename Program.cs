@@ -52,3 +52,11 @@ totalClienteUm = subtotalItemUm + subTotalItemDois + subTotalItemTres;
 valorDoImposto = totalClienteUm * percentualImpostoVenda;
 
 totalComImposto = totalClienteUm + valorDoImposto;
+
+Console.WriteLine("\n");
+Console.WriteLine($"1. {qtdItem1}x {nomePrimeiroItem} --> {subtotalItemUm:C2}");
+Console.WriteLine($"2. {qtdItem2}x {nomeSegundoItem} --> {subTotalItemDois:C2}");
+Console.WriteLine($"3. {qtdItem3}x {nomeTerceiroItem} --> {subTotalItemTres:C2}");
+
+Console.WriteLine($"\nImposto (8,8%): {valorDoImposto:C2}");
+Console.WriteLine($"\nTotal: {totalComImposto:C2}");
